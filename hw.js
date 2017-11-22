@@ -39,7 +39,7 @@ $(document).ready(function() {
         // Sets new attribute "text" to the current index value of "animals", which is the "arrayToUse".
         a.text(arrayToUse[i]);
         // This appends a new button (value of var a) into the element specified by areaToAddTo.
-        div.append(a).append(span);
+        div.append(a).append(span).addClass("remove-button");
         span.on("click", function(event){
         $(event.currentTarget).parent().remove();
           console.log('should be remmoving')

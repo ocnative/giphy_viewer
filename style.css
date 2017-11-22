@@ -12,6 +12,10 @@ body {
   padding: 10px;
 }
 
+.remove-button {
+  display: inline-block;
+
+}
 form {
   float: right;
   width: 30%;
