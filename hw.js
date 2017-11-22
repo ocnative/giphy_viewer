@@ -28,10 +28,7 @@ $(document).ready(function() {
     // arrayToUse gets defined as the variable "animals".
       for (var i = 0; i < arrayToUse.length; i++) {
     // var a is jQuery shorthand for document.createElement ("button")
-        var a = $("<button>");
-        var div = $("<div>");
-        var span = $("<button>X</button>");
-
+      var a = $("<button>");
     // These methods("a.addClass", etc.) are jQuery shorthand methods available on object "a" because we used the $ syntax when creating var a above.
         a.addClass(classToAdd);
         // Sets new attribute "data-type" to "animals", which is the "arrayToUse".
@@ -39,14 +36,7 @@ $(document).ready(function() {
         // Sets new attribute "text" to the current index value of "animals", which is the "arrayToUse".
         a.text(arrayToUse[i]);
         // This appends a new button (value of var a) into the element specified by areaToAddTo.
-        div.append(a).append(span).addClass("remove-button");
-        span.on("click", function(event){
-        var type = arrayToUse[i];
-        animals.splice(animals.indexOf(type),1)
-        $(event.currentTarget).parent().remove();
-          console.log('should be removing')
-        })
-          $(areaToAddTo).append(div);
+        $(areaToAddTo).append(a);
       }
 
   }
@@ -116,7 +106,7 @@ $(document).ready(function() {
   $("#add-animal").on("click", function(event) {
     event.preventDefault();
     var newAnimal = $("input").eq(0).val();
-
+    $("input").eq(0).val("");
     if (newAnimal.length > 2) {
       animals.push(newAnimal);
     }
