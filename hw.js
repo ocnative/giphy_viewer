@@ -41,7 +41,7 @@ $(document).ready(function() {
         // This appends a new button (value of var a) into the element specified by areaToAddTo.
         div.append(a).append(span);
         span.on("click", function(event){
-          div.remove();
+        $(event.currentTarget).parent().remove();
           console.log('should be remmoving')
         })
           $(areaToAddTo).append(div);
