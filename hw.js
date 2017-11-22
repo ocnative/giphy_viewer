@@ -41,8 +41,10 @@ $(document).ready(function() {
         // This appends a new button (value of var a) into the element specified by areaToAddTo.
         div.append(a).append(span).addClass("remove-button");
         span.on("click", function(event){
+        var type = arrayToUse[i];
+        animals.splice(animals.indexOf(type),1)
         $(event.currentTarget).parent().remove();
-          console.log('should be remmoving')
+          console.log('should be removing')
         })
           $(areaToAddTo).append(div);
       }
