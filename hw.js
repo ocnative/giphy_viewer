@@ -50,7 +50,7 @@ $(document).ready(function() {
     // "$(this)" is the currently clicked button.
     var type = $(this).attr("data-type");
     // You can type http://api.giphy.com/v1/gifs/search?q=squirrel&api_key=dc6zaTOxFJmzC&limit=12 into a browser address bar and it will return the data for your GIFs instead of the GIFs themselves.
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=12";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=12";
 
 // jQuery shorthand for the ajax method to request for the URL that is the vaue of the var queryURL defined above.
     $.ajax({
