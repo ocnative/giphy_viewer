@@ -30,7 +30,7 @@ $(document).ready(function() {
     // var a is jQuery shorthand for document.createElement ("button")
         var a = $("<button>");
         var div = $("<div>");
-        var span = $("<span>X</span>");
+        var span = $("<button>X</button>");
 
     // These methods("a.addClass", etc.) are jQuery shorthand methods available on object "a" because we used the $ syntax when creating var a above.
         a.addClass(classToAdd);
@@ -42,6 +42,7 @@ $(document).ready(function() {
         div.append(a).append(span);
         span.on("click", function(event){
           div.remove();
+          console.log('should be remmoving')
         })
           $(areaToAddTo).append(div);
       }
