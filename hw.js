@@ -29,6 +29,9 @@ $(document).ready(function() {
       for (var i = 0; i < arrayToUse.length; i++) {
     // var a is jQuery shorthand for document.createElement ("button")
         var a = $("<button>");
+        var div = $("<div>");
+        var span = $("<span>X</span>");
+
     // These methods("a.addClass", etc.) are jQuery shorthand methods available on object "a" because we used the $ syntax when creating var a above.
         a.addClass(classToAdd);
         // Sets new attribute "data-type" to "animals", which is the "arrayToUse".
@@ -36,7 +39,11 @@ $(document).ready(function() {
         // Sets new attribute "text" to the current index value of "animals", which is the "arrayToUse".
         a.text(arrayToUse[i]);
         // This appends a new button (value of var a) into the element specified by areaToAddTo.
-        $(areaToAddTo).append(a);
+        div.append(a).append(span);
+        span.on("click", function(event){
+          div.remove();
+        })
+          $(areaToAddTo).append(div);
       }
 
   }
